@@ -170,9 +170,9 @@
   hidden: false
   selected: false
   packages:
-    - plasma-meta
-    - kdebase-meta
-    - kde-applications-meta
+    - plasma
+    - kdebase
+    - kde-applications
 
 
  
