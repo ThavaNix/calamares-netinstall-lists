@@ -66,8 +66,8 @@
 
 - name: "Xorg"
   description: "Xorg Groups"
-  hidden: false
-  selected: false
+  hidden: true
+  selected: true
   critical: false
   packages:
 
@@ -133,6 +133,7 @@
     - xf86-video-tseng
     - xf86-video-v4l
     - xf86-video-vesa
+    - xf86-video-vmware
     - xf86-video-voodoo
     - mesa-libgl
     - open-vm-tools
