@@ -61,6 +61,7 @@
     - unrar
     - unzip
     - zip
+    - lightdm-gtk-greeter-settings
     
 
 - name: "Xorg"
@@ -173,11 +174,5 @@
     - kdebase-meta
     - kde-applications-meta
 
-- name: "Display Manager Desktop"
-  description: "Display Manager groups"
-  hidden: false
-  selected: false
-  packages:
-    - lightdm-gtk-greeter-settings
-    - gdm
-    - lxdm
+
+ 
