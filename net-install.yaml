@@ -1,0 +1,183 @@
+# Example configuration with groups and packages, taken from Chakra Linux.
+#
+# This example is rather limited. See `README.md` for full documentation
+# on the configuration format.
+- name: "Default"
+  description: "Default group"
+  hidden: true
+  selected: true
+  critical: false
+  packages:
+    - base
+    - base-devel
+    - lsb-release
+    - avahi
+    - grub
+    # disk utils
+    - dosfstools
+    - e2fsprogs
+    - fuse
+    - gptfdisk
+    - jfsutils
+    - ntfs-3g
+    - reiserfsprogs
+    - xfsprogs
+    # power
+    - acpi_call
+    - pmtools
+    # network
+    - dnsutils
+    - iputils
+    - netcfg
+    - xinetd
+    # firmwares
+    - alsa-firmware
+    - linux-firmware
+    # sound
+    - alsa-lib
+    - alsa-utils
+    - gstreamer
+    - gst-plugins-good
+    - gst-plugins-bad
+    - libao
+    - libcanberra-gstreamer
+    - libcanberra-pulse
+    - pulseaudio
+    - pulseaudio-alsa
+    # tools
+    - bash-completion
+    - hwinfo
+    - lsof
+    - man-db
+    - mlocate
+    - nano
+    - openssh
+    - sudo
+    - vim
+    - zsh # :D
+    # archivers
+    - p7zip
+    - unarj
+    - unrar
+    - unzip
+    - zip
+    
+
+- name: "Xorg"
+  description: "Xorg Groups"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+
+    # xorg base
+    - xorg
+    - xorg-apps
+    - xorg-fonts-alias
+    - xorg-fonts-encodings
+    - xorg-fonts-misc
+    - xorg-res-utils
+    - xorg-server
+    - xorg-server-utils
+    - xorg-xauth
+    - xorg-xinit
+    - xorg-xkb-utils
+    # fonts
+    - terminus-font
+    - ttf-dejavu
+    - ttf-liberation
+    - wqy-microhei
+    - xorg-fonts-100dpi
+    - xorg-fonts-75dpi
+    - xorg-fonts-cyrillic
+    # additional stuff that needs xorg
+    - hicolor-icon-theme
+        # xorg input drivers
+    - xf86-input-synaptics
+    - xf86-input-wacom
+    - xf86-input-evdev
+    - xf86-input-keyboard
+    - xf86-input-mouse
+- name: " Video  Drivers"
+  description: "Video Drivers Groups"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+    # xorg video drivers
+    - xf86-video-apm
+    - xf86-video-ark
+    - xf86-video-ati
+    - xf86-video-chips
+    - xf86-video-cirrus
+    - xf86-video-glint
+    - xf86-video-i128
+    - xf86-video-i740
+    - xf86-video-intel
+    - xf86-video-mach64
+    - xf86-video-mga
+    - xf86-video-neomagic
+    - xf86-video-nouveau
+    - xf86-video-nv
+    - xf86-video-openchrome
+    - xf86-video-r128
+    - xf86-video-rendition
+    - xf86-video-s3
+    - xf86-video-s3virge
+    - xf86-video-savage
+    - xf86-video-siliconmotion
+    - xf86-video-sisusb
+    - xf86-video-tdfx
+    - xf86-video-trident
+    - xf86-video-tseng
+    - xf86-video-v4l
+    - xf86-video-vesa
+    - xf86-video-voodoo
+    - mesa-libgl
+    - open-vm-tools
+
+- name: "xfce Desktop"
+  description: "Xfce groups"
+  hidden: false
+  selected: false
+  critical: false
+  packages:
+    - xfce4
+    - xfce4-goodies
+
+- name: "mate Desktop"
+  description: "Mate groups"
+  hidden: false
+  selected: false
+  packages:
+    - mate
+    - mate-extra
+    - filemanager-actions
+    - accountsservice
+
+- name: "gnome Desktop"
+  description: "Gnome groups"
+  hidden: false
+  selected: false
+  packages:
+    - gnome
+    - gnome-extra
+    - filemanager-actions
+
+- name: "Kde Plasma Desktop"
+  description: "Plasma groups"
+  hidden: false
+  selected: false
+  packages:
+    - plasma-meta
+    - kdebase-meta
+    - kde-applications-meta
+
+- name: "Display Manager Desktop"
+  description: "Display Manager groups"
+  hidden: false
+  selected: false
+  packages:
+    - lightdm-gtk-greeter-settings
+    - gdm
+    - lxdm
